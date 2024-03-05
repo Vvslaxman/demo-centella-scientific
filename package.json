@@ -1,0 +1,46 @@
+{
+  "name": "demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@heroicons/react": "^2.0.18",
+    "@material-tailwind/react": "^2.0.1",
+    "@react-three/drei": "^9.71.0",
+    "@react-three/fiber": "^8.13.0",
+    "autoprefixer": "^10.4.14",
+    "framer-motion": "^10.12.16",
+    "globe.gl": "^2.28.4",
+    "maath": "^0.6.0",
+    "mdb-react-ui-kit": "^6.1.0",
+    "postcss": "^8.4.24",
+    "react": "^18.2.0",
+    "react-background-slider": "^3.0.0-0",
+    "react-dom": "^18.2.0",
+    "react-globe.gl": "^2.24.1",
+    "react-ionicons": "^4.2.1",
+    "react-parallax-tilt": "^1.7.143",
+    "react-router-dom": "^6.11.2",
+    "react-simple-chatbot": "^0.6.1",
+    "react-vertical-timeline-component": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.9"
+  }
+}
