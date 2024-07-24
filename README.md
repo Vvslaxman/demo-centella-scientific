@@ -696,4 +696,43 @@ module.exports = {
 <br />
 <br />
 
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or new features.
+
+### Steps to Contribute:
+
+1. **Fork the repository:**
+
+   ```sh
+   git clone https://github.com/yourusername/react-dashboard.git
+   cd react-dashboard
+   ```
+
+2. **Create a new branch for your feature or bugfix:**
+
+   ```sh
+   git checkout -b feature-or-bugfix-name
+   ```
+
+3. **Make your changes and commit them:**
+
+   ```sh
+   git commit -am 'Add new feature or fix'
+   ```
+
+4. **Push your branch to GitHub:**
+
+   ```sh
+   git push origin feature-or-bugfix-name
+   ```
+
+5. **Create a Pull Request:**
+   - Go to the repository on GitHub.
+   - Click on the "New Pull Request" button.
+   - Provide a description of your changes and submit the PR.
+
+## Contact
+
+For any questions or suggestions, please open an issue or contact the repository owner.
 
