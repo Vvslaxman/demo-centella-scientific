@@ -1,7 +1,8 @@
 {
   "name": "demo",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "homepage": "https://vvslaxman.github.io/demo-centella-scientific", 
   "type": "module",
   "scripts": {
     "dev": "vite",
