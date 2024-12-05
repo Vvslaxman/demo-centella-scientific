@@ -64,12 +64,14 @@ const Hero = () => {
             <span className="txt-rotate" dataPeriod="1000" data-rotate='["Unparalleld scientific expertise",
    "Quick turnaround", "Value addition", "Assured confidentiality", "On-time delivery","Interactive & Proven processes" ]'><span className="wrap">{text}</span></span>
           </p>
+       
         </div>
+        
       </div>
       
-      
-
       <DrugsCanvas />
+
+    
 
       <div className='absolute xs:bottom-1 bottom-22 w-full flex flex-col justify-center items-center text-white'>
       

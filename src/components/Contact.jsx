@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { Earth } from "./canvas";
+
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 const Contact = () => {

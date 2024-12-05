@@ -146,7 +146,7 @@ const team = [
   {
     name: "Dr. Riyaz Syed",
     designation: "Chief Scientist",
-    image: "https://media.licdn.com/dms/image/D5603AQGL2xGU6s9GSw/profile-displayphoto-shrink_400_400/0/1701757919492?e=1715212800&v=beta&t=tQN409r241ZvNpLy2Sz1bDkoUZeVTr27z169vuXXREs",
+    image: "https://i1.rgstatic.net/ii/profile.image/885923415863299-1588232010385_Q512/Riyaz-Syed.jpg",
   },
   {
     name: "Mrs.Teja Arigela",
