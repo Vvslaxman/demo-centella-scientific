@@ -22,11 +22,19 @@ jobs:
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
 
+      - name: Set environment variables
+        run: echo "VITE_EMAILJS_USERID=${{ secrets.VITE_EMAILJS_USERID }}" >> $GITHUB_ENV
+        # Add additional environment variables here if needed
+      - name: Set more environment variables (optional)
+        run: echo "VITE_EMAILJS_TEMPLATEID=${{ secrets.VITE_EMAILJS_TEMPLATEID }}" >> $GITHUB_ENV
+      - name: Set more environment variables (optional)
+        run: echo "VITE_EMAILJS_RECEIVERID=${{ secrets.VITE_EMAILJS_RECEIVERID }}" >> $GITHUB_ENV
+
       - name: Build project
         run: npm run build
 
       - name: Upload production-ready build files
-        uses: actions/upload-artifact@v3  # Updated to v3
+        uses: actions/upload-artifact@v3
         with:
           name: production-files
           path: ./dist
@@ -39,7 +47,7 @@ jobs:
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3  # Updated to v3
+        uses: actions/download-artifact@v3
         with:
           name: production-files
           path: ./dist

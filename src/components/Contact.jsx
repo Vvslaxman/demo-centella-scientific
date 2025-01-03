@@ -4,10 +4,13 @@ import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { Earth } from "./canvas";
-
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+
 const Contact = () => {
+  const userId = import.meta.env.VITE_EMAILJS_USERID;
+  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATEID;
+  const receiverId = import.meta.env.VITE_EMAILJS_RECEIVERID;
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -26,32 +29,27 @@ const Contact = () => {
       [name]: value,
     });
   };
-//service_70xn8en
-//template_emsj4rw
-//9_8gF_3lrSXtdufkr
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-
-    emailjs
-      .send(
-        'service_70xn8en',
-        'template_emsj4rw',
-        
-        {
-          from_name: form.name,
-          to_name: "Demo Centella Scientific",
-          from_email: form.email,
-          to_email: "connect@centella.co.in",
-          message: form.message,
-        },
-        '9_8gF_3lrSXtdufkr',
-      )
+  
+    emailjs.send(
+      receiverId,
+      templateId,
+      {
+        from_name: form.name,
+        to_name: "Demo Centella Scientific",
+        from_email: form.email,
+        to_email: "connect@centella.co.in",
+        message: form.message,
+      },
+      userId
+    )
       .then(
         () => {
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
-
           setForm({
             name: "",
             email: "",
@@ -61,11 +59,11 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.error(error);
-
           alert("Ahh, something went wrong. Please try again.");
         }
       );
   };
+  
 
   return (
     <div
@@ -73,7 +71,7 @@ const Contact = () => {
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl  '
+        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -133,7 +131,7 @@ const Contact = () => {
         <Earth />
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default SectionWrapper(Contact, "contact")
+export default SectionWrapper(Contact, "contact");
